@@ -11,4 +11,4 @@ public class bus
 }
 new Gain[maxchannels] @=> bus.chan;
 
-<<< "CIPm loaded you might want to load a preset!";
+<<< "CIPm loaded you might want to load a preset!" >>>;
