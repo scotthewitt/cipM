@@ -18,7 +18,7 @@ public class CipMixer
             counter + 1::samp => counter;
             tempenv.value() => u.gain;
             1::samp => now;
-            <<< tempenv.value() >>>;
+            //<<< tempenv.value() >>>;
         } 
     }
     
@@ -56,8 +56,7 @@ public class CipMixer
         //connect when at 0
         u => bus.chan[i];
         tempf => temp.target;
-        <<< "tempf " + tempf + "ugain " + u.gain() >>>;
-        //temp.keyOn();
+        //<<< "tempf " + tempf + "ugain " + u.gain() >>>;
         
         parallelfade(u, temp);
     }
