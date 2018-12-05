@@ -17,8 +17,18 @@ public class CipMixer
         {
             counter + 1::samp => counter;
             tempenv.value() => u.gain;
-            1::samp => now;          
+            1::samp => now;
+            <<< tempenv.value() >>>;
         } 
+    }
+    
+    function void gainchange(int i, float f)
+    {
+        Envelope temp => blackhole;
+        2::ms => temp.duration;
+        bus.chan[i].gain() => temp.value;
+        f => temp.target;     
+        parallelfade(bus.chan[i], temp);
     }
     
     function void disconnect(UGen u, int i)
@@ -33,8 +43,7 @@ public class CipMixer
         
         u =< bus.chan[i];
     } 
-    
-    
+     
     function void connect(UGen u, int i)
     {
         Envelope temp => blackhole;

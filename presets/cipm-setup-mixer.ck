@@ -17,8 +17,3 @@ for( 0 => int counter; counter < lastchannel; counter++ )
 bus.chan[lastchannel] => dac;
 
 <<< "bus.chan["+lastchannel+"] => dac" >>>;
-
-//live forever
-while(true) {
-    1::hour => now;
-}
