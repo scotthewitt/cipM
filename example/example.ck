@@ -4,10 +4,10 @@
 SinOsc s;
 
 //create mixer controller
-CipMixer cm;
+CipMixerInterface cm;
 
 //connect UGen to audio buss
-cm.connect(s,3);
+cm.connect(s,2);
 
 //change gain
 cm.gainchange(3,0.9);

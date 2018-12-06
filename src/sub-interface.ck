@@ -1,4 +1,4 @@
-public class CipMixer
+public class CipMixerInterface
 {
     bus.chan.cap() => int maxchannum;
         
