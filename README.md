@@ -3,12 +3,12 @@ ChucK Instrument Processing Mixer
 
 ## About
 
-cipM is the Mixer built into CIP as a stand alone application. (CIP still uses another code base but they will one day be united.)
+cipM is based on the audio mixer which was orignally built into CIP but is now a stand alone application. (CIP still uses another code base but they will one day be united.)
 
 ### cipM is
 
   * Configurable Mixer
-  * Optional GUI
+  * Optional GUI (OSX only)
   * Mono
 
 ### Requires
